@@ -1,0 +1,96 @@
+.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+.close {
+  width: 5%;
+  padding: 8px;
+  cursor: pointer;
+}
+.close:hover {
+  color: red;
+  opacity: 1;
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+  transition: all 0.4s;
+}
+
+.todo {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  margin-top: 10px;
+  height: 40px;
+
+  transition: all 0.5s;
+  position: relative;
+  list-style-type: none;
+  border: 1px solid gainsboro;
+  border-radius: 20px;
+}
+
+.content {
+  width: 97%;
+  vertical-align: middle;
+  margin-top: 7px;
+}
+
+.close::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.4s;
+  transform: scale(0.5, 1);
+}
+.close:hover::before {
+  opacity: 1;
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+
+.Container {
+  background-color: #fff;
+  border: orange;
+}
+.checkBox {
+  margin-left: 15px;
+  margin-top: 12px;
+}
+.index {
+  color: black;
+}
+
+input [type='text']:focus {
+  border: darkgrey;
+  transition: ease-in;
+}
+input[type='text'] {
+  width: 50%;
+  padding: 8px;
+  margin-top: 20px;
+}
+input[type='submit'] {
+  margin-left: 10px;
+  padding: 10px;
+  border: 1px solid gainsboro;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+}
+input[type='submit']:hover {
+  background-color: gainsboro;
+}
+input [type='submit']:checked {
+  border-radius: 10px;
+  transition: ease-in;
+  background-color: gray;
+  color: #fff;
+  text-shadow: none;
+  border-style: outset;
+  outline: none;
+}
